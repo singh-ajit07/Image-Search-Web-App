@@ -1,4 +1,4 @@
-const accessKey = 'LEJOagSHTC9Uq5MAB8PuT7DrZkhsJEBdh5nMaarz2e4'; // Keep your access key private
+const accessKey = "YOUR_ACCESS_KEY";     // Keep your access key private
 
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('.search-input');
