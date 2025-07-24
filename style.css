@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  margin-top: 120px; /* Adjust this value based on your header's height */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 250px; /* pushes everything a little down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+header {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+header.header-up {
+  transform: translateY(-80px); /* Adjust this to move it up slightly */
+  transition: transform 0.4s ease;
+}
+
+
+header h1 {
+  color: #767676;
+}
+
+header form .search-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+header form .search-container input {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+}
+
+header form .search-container .material-icons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #777;
+  cursor: pointer;
+}
+
+.images-container {
+  margin-block: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.images-container img {
+  width: 300px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.images-container .imageDiv {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageDiv .overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.imageDiv:hover .overlay {
+  height: 100%;
+}
+
+.imageDiv .overlay h3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.download-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #333;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.imageDiv:hover .download-btn {
+  opacity: 1;
+}
+
+.loadMoreBtn {
+  border: none;
+  background-color: rgb(252, 105, 105);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 50px 0;
+}
+
+@media screen and (max-width: 920px) {
+  header {
+      width: 80%;
+  }
+}
